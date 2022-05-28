@@ -20,7 +20,7 @@
 		// Modern DApp browsers
 		if (window.ethereum) {
 			window.web3 = new Web3(ethereum);
-			
+			console.log("Modern DApp browser");
 			// To prevent the page reloading when the MetaMask network changes
 			ethereum.autoRefreshOnNetworkChange = false;
 			
@@ -33,6 +33,7 @@
 		else if (window.web3) {
 			//window.web3 = new Web3(web3.currentProvider);
 			window.web3 = new Web3(new Web3.providers.HttpProvider("https://ropsten.infura.io/v3/cbd9dc11b30147e9a2cc974be655ef7c")); 
+			console.log("Modern DApp browser");
 			}
 		// Non-DApp browsers
 		else {
